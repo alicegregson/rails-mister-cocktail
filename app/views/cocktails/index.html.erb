@@ -1,8 +1,23 @@
-<h1>Cocktails Index</h1>
+<!-- Cocktail Index -->
+<div class="jumbotron navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="header-text">
+    <h1>Cocktails</h1>
+    <h3>Add Your Cocktails here</h3>
+  </div>
+    <h3><%= link_to "Add new cocktail", new_cocktail_path, class: "banner-button" %></h3>
+</div>
 
-<%@cocktails.each do |cocktail|  %>
-<%= cocktail.name %>
-<%= link_to "More details", cocktail_path(cocktail) %>
-<% end %>
+  <div class="card-grid">
+    <%@cocktails.each do |cocktail|  %>
+      <div class="index_card">
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
+        <h4><%= cocktail.name %></h4>
+        <div class="details-btn">
+          <%= link_to "More details", cocktail_path(cocktail), class: "index-button" %>
+        </div>
+      </div>
+    <% end %>
 
-<p><%= link_to "Add new cocktail", new_cocktail_path %></p>
+  </div>
+
+<%= link_to "Add new cocktail", new_cocktail_path, id: "add-cocktail" %>

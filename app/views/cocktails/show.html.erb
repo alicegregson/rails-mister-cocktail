@@ -1,0 +1,29 @@
+<!-- Cocktails Show View -->
+
+
+<div class="jumbotron navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "Back to list of Cocktails", cocktails_path, class: "btn btn-ghost"  %>
+</div>
+
+
+<div class="wrapper">
+  <div class="cocktail-img">
+    <img src="https://images.unsplash.com/photo-1550426735-c33c7ce414ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="">
+  </div>
+  <div class="cocktail-info">
+    <h4><%= @cocktail.name %></h4>
+    <br>
+    <% @cocktail.doses.each do |d| %>
+      <p>Ingredient:<p>
+      <li></i><%= d.ingredient.name %></li>
+      <br>
+      <p>Description:<p>
+      <li></i><%= d.description %></li>
+    <% end  %>
+    <br>
+    <%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "index-button" %>
+    <br>
+  </div>
+
+</div>
+

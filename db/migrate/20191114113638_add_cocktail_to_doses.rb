@@ -1,4 +1,4 @@
-class AddCocktailToDoses < ActiveRecord::Migration[6.0]
+class AddCocktailToDoses < ActiveRecord::Migration[5.2]
   def change
     add_reference :doses, :cocktail, null: false, foreign_key: true
   end
