@@ -1,19 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Bentham&display=swap');
 
-body {
-
-}
-
 .wrapper {
   height: 420px;
   width: 654px;
   margin: 50px auto;
   border-radius: 7px 7px 7px 7px;
-  /* VIA CSS MATIC https://goo.gl/cIbnS */
-//   -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-//   -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-//   box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-// }
+}
 
 .cocktail-img {
   float: left;
@@ -28,13 +20,16 @@ body {
   float: left;
   height: 500px;
   width: 327px;
-  border-radius: 0 7px 10px 7px;
+  border-radius: 0 7px 7px 0px;
   background-color: #ffffff;
+  position: relative;
   li {
     margin: 0 0 0 38px;
     font-size: 18px;
     color: #474747;
     font-family: 'Raleway';
+    font-weight: lighter;
+    letter-spacing: 0.1em;
   }
   h4 {
     margin: 0 0 0 30px;
@@ -42,6 +37,16 @@ body {
     font-size: 34px;
     color: #474747;
     font-family: 'Bentham';
+    text-transform: uppercase;
+  }
+  h5 {
+    font-family: 'Raleway';
+    color: #474747;
+    margin: 0 0 0 34px;
+    // font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 20px;
   }
   p {
     font-family: 'Raleway';
@@ -52,70 +57,3 @@ body {
   }
 }
 
-.index-button {
-  float: down;
-  // display: inline-block;
-  height: 50px;
-  width: 176px;
-  // margin: 0 40px 0 16px;
-  // text-align: center;
-  padding-top: 5%;
-  // box-sizing: border-box;
-  border-radius: 60px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: #ffffff;
-  background-color: #9cebd5;
-  cursor: pointer;
-  &:hover{
-    text-decoration: none;
-  }
-}
-
-// .cocktail-text {
-//   height: 300px;
-//   width: 327px;
-// }
-
-// .cocktail-text h1 {
-//   margin: 0 0 0 38px;
-//   padding-top: 52px;
-//   font-size: 34px;
-//   color: #474747;
-}
-
-// .cocktail-text h1,
-// .cocktail-price-btn p {
-//   font-family: 'Bentham', serif;
-// }
-
-// .cocktail-text h2 {
-//   margin: 0 0 47px 38px;
-//   font-size: 13px;
-//   font-family: 'Raleway', sans-serif;
-//   font-weight: 400;
-//   text-transform: uppercase;
-//   color: #d2d2d2;
-//   letter-spacing: 0.2em;
-// }
-
-// .cocktail-text p {
-//   height: 125px;
-//   margin: 0 0 0 38px;
-//   font-family: 'Playfair Display', serif;
-//   color: #8d8d8d;
-//   line-height: 1.7em;
-//   font-size: 15px;
-//   font-weight: lighter;
-//   overflow: hidden;
-// }
-
-// span {
-//   display: inline-block;
-//   height: 50px;
-//   font-family: 'Suranna', serif;
-//   font-size: 34px;
-// }

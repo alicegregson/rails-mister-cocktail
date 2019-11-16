@@ -1,4 +1,3 @@
-<!-- DOSES New View -->
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <a class="navbar-brand" href="#">
   </a>
@@ -15,16 +14,19 @@
   </div>
 </div>
 
-<div class="form-container">
-  <%= simple_form_for([@cocktail, @dose]) do |f| %>
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-container">
     <div class="form-inputs">
-      <%= f.input :description %>
-      <%= f.association :ingredient %>
+      <h5><%= f.input :name %></h5>
+      <h5><%= f.input :photo, as: :file %></h5>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, class: "add-cocktail", id: "create-dose"  %>
+      <%= f.button :submit, class: "add-cocktail", id: "update-cocktail" %>
     </div>
-  <% end %>
-</div>
-
+    <% end %>
+  </div>
+<br>

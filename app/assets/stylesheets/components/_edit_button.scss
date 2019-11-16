@@ -1,0 +1,21 @@
+.edit-button {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #474747;
+  cursor: pointer;
+  &:hover{
+    text-decoration: none;
+    opacity: 1;
+    color: #d3d3d3;
+    text-decoration: underline;
+  }
+}
+
+.button-group {
+  margin: 10px 0px;
+}
+
+

@@ -1,14 +1,31 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+    <ul>
+      <li class="nav-item active">
+        <%= link_to "Back to Cocktails", root_path, class: "add-cocktail", id: "back-button" %>
+      </li>
+    </ul>
+  </div>
+</div>
+
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
+<div class="form-container">
   <div class="form-inputs">
-    <%= f.input :name %>
+    <h5><%= f.input :name, class: "input-text"%></h5>
+    <h5><%= f.input :photo, as: :file %></h5>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-primary"  %>
+  <%= f.button :submit, class: "add-cocktail", id: "create-cocktail"  %>
   </div>
-<% end %>
-<br>
-<%= link_to "Back to list of Cocktails", cocktails_path, class: "btn btn-primary" %>
+  <% end %>
+</div>

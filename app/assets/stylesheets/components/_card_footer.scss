@@ -1,0 +1,20 @@
+// _card_footer.scss
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  color: rgba(0,0,0,0.3);
+  position: absolute;
+  right: 5;
+  bottom: 0;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+#delete {
+  margin: 1%;
+}
+

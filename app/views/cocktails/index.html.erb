@@ -1,23 +1,33 @@
 <!-- Cocktail Index -->
-<div class="jumbotron navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="header-text">
-    <h1>Cocktails</h1>
-    <h3>Add Your Cocktails here</h3>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul>
+      <li class="nav-item active">
+        <%= link_to "Add Cocktail", new_cocktail_path, class: "add-cocktail" %>
+      </li>
+    </ul>
   </div>
-    <h3><%= link_to "Add new cocktail", new_cocktail_path, class: "banner-button" %></h3>
 </div>
+
 
   <div class="card-grid">
     <%@cocktails.each do |cocktail|  %>
       <div class="index_card">
-        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
+        <% if cocktail.photo.attached?  %>
+          <%= cl_image_tag cocktail.photo.key, height: 200, width: 150, crop: :fill %>
+        <% end %>
         <h4><%= cocktail.name %></h4>
-        <div class="details-btn">
-          <%= link_to "More details", cocktail_path(cocktail), class: "index-button" %>
+
+        <div class="detail-container">
+          <%= link_to "Details", cocktail_path(cocktail), class: "edit-button", id: "detail-button" %>
         </div>
       </div>
-    <% end %>
-
+   <% end %>
   </div>
-
-<%= link_to "Add new cocktail", new_cocktail_path, id: "add-cocktail" %>
