@@ -1,19 +1,6 @@
 <!-- DOSES New View -->
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse">
-    <ul>
-      <li class="nav-item active">
-        <%= link_to "Back to Cocktail", cocktail_path(@cocktail), class: "add-cocktail", id: "back-button" %>
-      </li>
-    </ul>
-  </div>
-</div>
+<%= link_to "Back to Cocktail", cocktail_path(@cocktail), class: "add-cocktail", id: "back-button" %>
 
 <div class="form-container">
   <%= simple_form_for([@cocktail, @dose]) do |f| %>

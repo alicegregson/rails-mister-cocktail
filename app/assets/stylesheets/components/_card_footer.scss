@@ -1,5 +1,5 @@
 // _card_footer.scss
-.footer {
+.card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,7 +9,7 @@
   right: 5;
   bottom: 0;
 }
-.footer-links {
+.card-footer-links {
   display: flex;
   align-items: center;
 }

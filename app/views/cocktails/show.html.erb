@@ -1,19 +1,5 @@
+<%= link_to "Back to Cocktails", root_path, class: "add-cocktail", id: "back-button" %>
 
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse">
-    <ul>
-      <li class="nav-item active">
-        <%= link_to "Back to Cocktails", root_path, class: "add-cocktail", id: "back-button" %>
-      </li>
-    </ul>
-  </div>
-</div>
 
 <div class="wrapper">
   <div class="cocktail-img">
@@ -29,8 +15,8 @@
       <li><%= dose.description %> of <%= dose.ingredient.name %></li>
       <p><%= link_to "Delete Ingredient", dose_path(dose), method: :delete, class: "edit-button" %>
     <% end  %>
-    <div class="footer">
-      <div class="footer-links">
+    <div class="card-footer">
+      <div class="card-footer-links">
         <p><%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "edit-button" %></p>
         <p><%= link_to "Edit Cocktail", edit_cocktail_path(@cocktail), class: "edit-button" %></p>
       </div>
